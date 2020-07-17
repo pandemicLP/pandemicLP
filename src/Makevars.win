@@ -7,6 +7,6 @@ PKG_CXXFLAGS = $(shell "$(R_HOME)/bin$(R_ARCH_BIN)/Rscript" -e "RcppParallel::Cx
 PKG_LIBS = $(shell "$(R_HOME)/bin$(R_ARCH_BIN)/Rscript" -e "RcppParallel::RcppParallelLibs()") $(shell "$(R_HOME)/bin$(R_ARCH_BIN)/Rscript" -e "StanHeaders:::LdFlags()")
 
 CXX14FLAGS=-03 -march=native
-CXX14 = C:/Rtools/mingw_64/bin/g++ -m$(WIN) -std=c++1y
+CXX14 = "C:/Rtools/mingw_64/bin/g++ -m$(WIN) -std=c++1y"
 CXX11FLAGS=-03 -march=native
 CXX_STD = CXX14
